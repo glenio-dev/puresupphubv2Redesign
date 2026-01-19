@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Search, ShoppingBag, Menu } from "lucide-react";
+import { Search, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Navbar() {
@@ -11,27 +11,27 @@ export function Navbar() {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const scrollToFaq = () => {
-    document.getElementById('faq')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/">
-          <a className="flex items-center gap-2">
+          <div className="flex items-center gap-2 cursor-pointer">
             <div className="h-10 w-10 rounded-xl bg-accent flex items-center justify-center shadow-lg">
               <span className="text-white font-bold text-xl">P</span>
             </div>
             <span className="text-2xl font-medium tracking-tighter text-primary">PuresuppHub</span>
-          </a>
+          </div>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
-          <Link href="/"><a className="text-sm font-bold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors">Home</a></Link>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} className="text-sm font-bold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors">Home</button>
           <button onClick={scrollToCatalog} className="text-sm font-bold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors">Categories</button>
           <button onClick={scrollToCatalog} className="text-sm font-bold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors">Top Products</button>
-          <button onClick={() => document.getElementById('why-us')?.scrollIntoView({ behavior: 'smooth' })} className="text-sm font-bold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors">About</button>
+          <button onClick={() => scrollToSection('why-us')} className="text-sm font-bold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors">About</button>
           <button onClick={scrollToContact} className="text-sm font-bold uppercase tracking-widest text-primary/70 hover:text-accent transition-colors">Contact</button>
         </div>
 
