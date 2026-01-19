@@ -36,7 +36,7 @@ export const products: Product[] = [
     image: aminoImg,
     category: "Physical Performance",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://advancedaminoformula.puresupphub.com"
   },
   {
     id: "advanced-collagen",
@@ -45,7 +45,7 @@ export const products: Product[] = [
     image: collagenImg,
     category: "Skin & Joints",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://advancedcollagen.puresupphub.com"
   },
   {
     id: "aizen-power",
@@ -54,7 +54,7 @@ export const products: Product[] = [
     image: aizenImg,
     category: "Men's Vitality",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://aizenpower.puresupphub.com"
   },
   {
     id: "digestsync",
@@ -63,7 +63,7 @@ export const products: Product[] = [
     image: digestImg,
     category: "General Wellness",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://digestsync.puresupphub.com"
   },
   {
     id: "fluxactive",
@@ -72,7 +72,7 @@ export const products: Product[] = [
     image: fluxactiveImg,
     category: "Men's Vitality",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://fluxactive.puresupphub.com"
   },
   {
     id: "glutless",
@@ -81,7 +81,7 @@ export const products: Product[] = [
     image: glutlessImg,
     category: "Blood Sugar",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://glutless.puresupphub.com"
   },
   {
     id: "joint-eternal",
@@ -90,7 +90,7 @@ export const products: Product[] = [
     image: jointImg,
     category: "Physical Performance",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://jointeternal.puresupphub.com"
   },
   {
     id: "kerassentials",
@@ -99,7 +99,7 @@ export const products: Product[] = [
     image: keraImg,
     category: "Skin, Hair & Nails",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://kerassentials.puresupphub.com"
   },
   {
     id: "leanbliss",
@@ -108,7 +108,7 @@ export const products: Product[] = [
     image: leanImg,
     category: "Weight Management",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://leanbliss.puresupphub.com"
   },
   {
     id: "hair-renewal",
@@ -117,7 +117,7 @@ export const products: Product[] = [
     image: hairImg,
     category: "Skin, Hair & Nails",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://liposomalhair.puresupphub.com"
   },
   {
     id: "neuro-fortis",
@@ -126,7 +126,7 @@ export const products: Product[] = [
     image: neuroImg,
     category: "Brain & Hearing",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://neurofortis.puresupphub.com"
   },
   {
     id: "pineal-guardian",
@@ -135,7 +135,7 @@ export const products: Product[] = [
     image: pinealImg,
     category: "Brain & Hearing",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://pinealguardian.puresupphub.com"
   },
   {
     id: "primebiome",
@@ -144,7 +144,7 @@ export const products: Product[] = [
     image: primeImg,
     category: "General Wellness",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://primebiome.puresupphub.com"
   },
   {
     id: "prodentim",
@@ -154,7 +154,7 @@ export const products: Product[] = [
     category: "Oral Health",
     badge: "Best Seller",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://prodentim.puresupphub.com"
   },
   {
     id: "steel-bite",
@@ -163,7 +163,7 @@ export const products: Product[] = [
     image: steelImg,
     category: "Oral Health",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://steelbite.puresupphub.com"
   },
   {
     id: "sugar-defender",
@@ -173,7 +173,7 @@ export const products: Product[] = [
     category: "Blood Sugar",
     badge: "Best Seller",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://sugardefender.puresupphub.com"
   },
   {
     id: "tonicgreens",
@@ -182,7 +182,7 @@ export const products: Product[] = [
     image: tonicImg,
     category: "General Wellness",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://tonicgreens.puresupphub.com"
   },
   {
     id: "zencortex",
@@ -192,6 +192,6 @@ export const products: Product[] = [
     category: "Brain & Hearing",
     badge: "Trending",
     features: ["FDA Facility", "Natural Ingredients"],
-    affiliateUrl: "#"
+    affiliateUrl: "https://zencortex.puresupphub.com"
   }
 ];
