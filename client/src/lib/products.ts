@@ -21,123 +21,177 @@ export interface Product {
   id: string;
   name: string;
   description: string;
-  price: number;
-  rating: number;
   image: string;
   category: string;
   badge?: string;
+  features: string[];
+  affiliateUrl: string;
 }
 
 export const products: Product[] = [
   {
     id: "advanced-amino",
     name: "Advanced Amino Formula",
-    description: "Complete amino acid profile for optimal muscle recovery and energy.",
-    price: 49.95,
-    rating: 4.8,
+    description: "Essential amino acids for peak recovery and physical performance.",
     image: aminoImg,
-    category: "Performance",
-    badge: "Best Seller"
+    category: "Physical Performance",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
   },
   {
     id: "advanced-collagen",
     name: "Advanced Collagen Plus",
-    description: "Premium collagen peptides for skin elasticity and joint health.",
-    price: 59.95,
-    rating: 4.9,
+    description: "Premium collagen support for skin elasticity and joint mobility.",
     image: collagenImg,
-    category: "Beauty",
-    badge: "Trending"
+    category: "Skin & Joints",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
   },
   {
-    id: "neuro-fortis",
-    name: "Neuro Fortis Pro",
-    description: "Cognitive health support for memory, focus, and attention.",
-    price: 69.00,
-    rating: 4.7,
-    image: neuroImg,
-    category: "Brain Health"
+    id: "aizen-power",
+    name: "Aizen Power",
+    description: "Natural dominance and vitality formula for men.",
+    image: aizenImg,
+    category: "Men's Vitality",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
   },
   {
-    id: "prodentim",
-    name: "ProDentim",
-    description: "Advanced oral probiotics for healthy teeth and gums.",
-    price: 59.00,
-    rating: 4.8,
-    image: prodentimImg,
-    category: "Oral Health"
+    id: "digestsync",
+    name: "DigestSync",
+    description: "Advanced digestive support with enzyme-rich formula.",
+    image: digestImg,
+    category: "General Wellness",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
   },
   {
-    id: "sugar-defender",
-    name: "Sugar Defender",
-    description: "Blood sugar support formula with natural plant ingredients.",
-    price: 69.00,
-    rating: 4.9,
-    image: sugarImg,
-    category: "Health Support",
-    badge: "New"
+    id: "fluxactive",
+    name: "Fluxactive Complete",
+    description: "Complete 14-in-1 wellness formula for prostate health.",
+    image: fluxactiveImg,
+    category: "Men's Vitality",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
   },
   {
-    id: "tonic-greens",
-    name: "Tonic Greens",
-    description: "Immune support super antioxidants blend for daily vitality.",
-    price: 79.00,
-    rating: 4.8,
-    image: tonicImg,
-    category: "Immunity"
-  },
-  {
-    id: "lean-bliss",
-    name: "LeanBliss",
-    description: "Healthy weight support and blood sugar balance chewables.",
-    price: 59.00,
-    rating: 4.6,
-    image: leanImg,
-    category: "Weight Management"
-  },
-  {
-    id: "hair-renewal",
-    name: "Hair Renewal",
-    description: "Liposomal absorption formula with Anagain Nu for hair growth.",
-    price: 49.95,
-    rating: 4.7,
-    image: hairImg,
-    category: "Beauty"
-  },
-  {
-    id: "prime-biome",
-    name: "Prime Biome",
-    description: "Skin and gut essential probiotics for dermal balance.",
-    price: 59.00,
-    rating: 4.8,
-    image: primeImg,
-    category: "Gut Health"
+    id: "glutless",
+    name: "GlutLess",
+    description: "Supports healthy blood sugar balance and carb metabolism.",
+    image: glutlessImg,
+    category: "Blood Sugar",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
   },
   {
     id: "joint-eternal",
     name: "JointEternal",
-    description: "Promotes healthy cartilage and supports joint mobility.",
-    price: 49.00,
-    rating: 4.7,
+    description: "Natural support for joint comfort and health.",
     image: jointImg,
-    category: "Joint Health"
+    category: "Physical Performance",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
   },
   {
-    id: "zencortex",
-    name: "ZenCortex",
-    description: "Hearing support drops with deep professional formula.",
-    price: 69.00,
-    rating: 4.8,
-    image: zenImg,
-    category: "Sensory Health"
+    id: "kerassentials",
+    name: "Kerassentials",
+    description: "Doctor-formulated oil for healthy nails and skin defense.",
+    image: keraImg,
+    category: "Skin, Hair & Nails",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
+  },
+  {
+    id: "leanbliss",
+    name: "LeanBliss",
+    description: "Natural weight management and craving control.",
+    image: leanImg,
+    category: "Weight Management",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
+  },
+  {
+    id: "hair-renewal",
+    name: "Liposomal Hair Renewal",
+    description: "Revitalize hair thickness and scalp health with liposomal tech.",
+    image: hairImg,
+    category: "Skin, Hair & Nails",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
+  },
+  {
+    id: "neuro-fortis",
+    name: "NeuroFortis",
+    description: "Cognitive support for memory strength and mental clarity.",
+    image: neuroImg,
+    category: "Brain & Hearing",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
   },
   {
     id: "pineal-guardian",
     name: "Pineal Guardian",
-    description: "Support for the pineal gland and spiritual connection.",
-    price: 59.00,
-    rating: 4.5,
+    description: "Unlock mental clarity and support memory function.",
     image: pinealImg,
-    category: "Brain Health"
+    category: "Brain & Hearing",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
+  },
+  {
+    id: "primebiome",
+    name: "PrimeBiome",
+    description: "Dual-action probiotic support for total gut health.",
+    image: primeImg,
+    category: "General Wellness",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
+  },
+  {
+    id: "prodentim",
+    name: "ProDentim",
+    description: "3.5 Billion probiotic strains for optimal oral health and hygiene.",
+    image: prodentimImg,
+    category: "Oral Health",
+    badge: "Best Seller",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
+  },
+  {
+    id: "steel-bite",
+    name: "Steel Bite Pro",
+    description: "Herbal formula to rebuild dental resilience naturally.",
+    image: steelImg,
+    category: "Oral Health",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
+  },
+  {
+    id: "sugar-defender",
+    name: "Sugar Defender",
+    description: "All-day energy and blood sugar support helper.",
+    image: sugarImg,
+    category: "Blood Sugar",
+    badge: "Best Seller",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
+  },
+  {
+    id: "tonicgreens",
+    name: "TonicGreens",
+    description: "6-in-1 immune support blend with essential greens.",
+    image: tonicImg,
+    category: "General Wellness",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
+  },
+  {
+    id: "zencortex",
+    name: "ZenCortex",
+    description: "360-degree hearing support and mental sharpness formula.",
+    image: zenImg,
+    category: "Brain & Hearing",
+    badge: "Trending",
+    features: ["FDA Facility", "Natural Ingredients"],
+    affiliateUrl: "#"
   }
 ];

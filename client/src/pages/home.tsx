@@ -12,7 +12,7 @@ export default function Home() {
       <main>
         <Hero />
         <Features />
-        <ProductGrid products={products} title="Explore Wellness" />
+        <ProductGrid products={products} title="Verified Product Catalog 2026" />
       </main>
       <Footer />
     </div>

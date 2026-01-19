@@ -10,18 +10,20 @@ export function Hero() {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-[#E8EDE7]/30 blur-[120px] rounded-full translate-x-1/3 -translate-y-1/4 pointer-events-none" />
 
       <div className="container mx-auto px-4 grid lg:grid-cols-12 gap-12 items-center">
-        <div className="lg:col-span-5 relative z-10">
+        <div className="lg:col-span-6 relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="flex items-center gap-2 mb-6"
           >
-            <span className="px-3 py-1 text-xs font-semibold tracking-wide uppercase bg-[#E8EDE7] text-primary rounded-full">
-              New Arrival
+            <span className="px-3 py-1 text-[10px] font-bold tracking-widest uppercase bg-primary text-white rounded-sm">
+              🚀 NOT A SUPPLEMENT STORE
             </span>
             <span className="w-1 h-1 rounded-full bg-accent" />
-            <span className="text-sm text-muted-foreground font-medium">Advanced Bio-Nutritionals</span>
+            <span className="px-3 py-1 text-[10px] font-bold tracking-widest uppercase bg-[#E8EDE7] text-primary rounded-sm">
+              NOT A REVIEW SITE
+            </span>
           </motion.div>
 
           <motion.h1 
@@ -30,81 +32,76 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-5xl md:text-6xl lg:text-7xl font-medium leading-[1.1] mb-6 text-primary"
           >
-            The Fastest Way to Buy <em className="font-normal italic text-accent">Natural</em> Supplements
+            The Fastest Way to Buy Natural Supplements— <em className="font-normal italic text-accent underline decoration-accent/30 underline-offset-8">Direct</em> from Verified Suppliers
           </motion.h1>
 
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg text-muted-foreground mb-8 max-w-md leading-relaxed"
+            className="text-lg text-muted-foreground mb-8 max-w-xl leading-relaxed"
           >
-            Premium, clinically-researched formulas for your holistic health journey. Pure ingredients, potent results.
+            Skip the endless browsing, account signups, and retail markups. PuresuppHub connects you straight to premium suppliers in 2 clicks—so you save time AND money.
           </motion.p>
 
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-4"
           >
-            <Button size="lg" className="bg-primary hover:bg-[#2D6A4F] text-white px-8 h-14 text-base rounded-lg shadow-[0_8px_20px_rgba(27,67,50,0.25)] hover:translate-y-[-2px] transition-all duration-300">
-              Shop Collection
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-[#2D6A4F] text-white px-8 h-16 text-lg rounded-lg shadow-[0_8px_20px_rgba(27,67,50,0.25)] hover:translate-y-[-2px] transition-all duration-300 group"
+              onClick={() => document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' })}
+            >
+              Find My Supplement (2 Clicks) <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-primary text-primary hover:bg-primary hover:text-white px-8 h-14 text-base rounded-lg transition-all duration-300">
-              Learn More
-            </Button>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="mt-12 flex items-center gap-4 text-sm text-muted-foreground"
-          >
-            <div className="flex -space-x-2">
-              {[1, 2, 3, 4].map((i) => (
-                <div key={i} className="w-8 h-8 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center overflow-hidden">
-                   <img src={`https://i.pravatar.cc/100?img=${i + 10}`} alt="User" className="w-full h-full object-cover" />
-                </div>
-              ))}
-            </div>
-            <div>
-              <div className="flex items-center gap-1 text-yellow-500">
-                <Star className="w-3 h-3 fill-current" />
-                <Star className="w-3 h-3 fill-current" />
-                <Star className="w-3 h-3 fill-current" />
-                <Star className="w-3 h-3 fill-current" />
-                <Star className="w-3 h-3 fill-current" />
-              </div>
-              <p className="font-medium text-primary">Trusted by 10,000+ Customers</p>
-            </div>
+            <p className="mt-4 text-sm text-muted-foreground font-medium flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+              No signup required. Direct to supplier in 60 seconds.
+            </p>
           </motion.div>
         </div>
 
-        <div className="lg:col-span-7 relative">
+        <div className="lg:col-span-6 relative">
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="relative z-10"
           >
-            {/* Main Product Image with floating effect */}
-            <div className="relative aspect-square md:aspect-[4/3] max-w-[120%] -mr-[20%]">
-               <img 
-                  src={collagenImg} 
-                  alt="Advanced Collagen Plus" 
-                  className="w-full h-full object-contain drop-shadow-2xl"
-               />
+            {/* Visual Concept: Product Card Floating with Arrows */}
+            <div className="relative aspect-square md:aspect-[4/3] flex items-center justify-center">
+              <div className="relative p-8 bg-white rounded-3xl shadow-2xl border border-border/50 max-w-sm">
+                <div className="absolute -top-6 -right-6 w-20 h-20 bg-accent rounded-full flex items-center justify-center text-white shadow-lg rotate-12">
+                  <span className="text-xs font-bold text-center">FACTORY<br/>DIRECT</span>
+                </div>
+                <img src={collagenImg} alt="Direct Connection" className="w-full h-auto object-contain mb-6" />
+                <div className="flex items-center justify-between gap-4">
+                  <div className="text-center">
+                    <div className="w-10 h-10 rounded-full bg-[#F1F3EE] flex items-center justify-center mx-auto mb-2">👤</div>
+                    <span className="text-[10px] font-bold text-primary">YOU</span>
+                  </div>
+                  <div className="flex-1 flex flex-col items-center gap-1">
+                    <div className="h-0.5 w-full bg-gradient-to-r from-accent to-accent/20 rounded-full relative">
+                      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 border-t-2 border-r-2 border-accent rotate-45" />
+                    </div>
+                    <span className="text-[8px] font-bold text-accent uppercase tracking-tighter italic">2 Clicks Access</span>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-10 h-10 rounded-full bg-[#E8EDE7] flex items-center justify-center mx-auto mb-2">🏢</div>
+                    <span className="text-[10px] font-bold text-primary">SUPPLIER</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </motion.div>
 
-          {/* Decorative Circle */}
           <motion.div 
              initial={{ scale: 0.8, opacity: 0 }}
              animate={{ scale: 1, opacity: 1 }}
              transition={{ duration: 1, delay: 0.2 }}
-             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-[#E8EDE7] to-white rounded-full -z-10 blur-3xl opacity-60"
+             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-tr from-[#E8EDE7] to-white rounded-full -z-10 blur-3xl opacity-60"
           />
         </div>
       </div>

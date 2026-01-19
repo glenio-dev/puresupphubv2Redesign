@@ -1,64 +1,60 @@
 export function Footer() {
   return (
-    <footer className="bg-[#1B4332] text-white pt-20 pb-10">
+    <footer className="bg-[#0A1F1A] text-white pt-24 pb-12">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="h-8 w-8 rounded-full bg-white flex items-center justify-center">
-                <span className="text-primary font-bold text-lg">P</span>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+          <div className="lg:col-span-1">
+            <div className="flex items-center gap-2 mb-8">
+              <div className="h-10 w-10 rounded-xl bg-accent flex items-center justify-center shadow-lg">
+                <span className="text-white font-bold text-xl">P</span>
               </div>
-              <span className="text-xl font-medium tracking-tight">PuresuppHub</span>
+              <span className="text-2xl font-medium tracking-tighter">PuresuppHub</span>
             </div>
-            <p className="text-white/60 leading-relaxed mb-6">
-              Your direct-to-consumer affiliate hub for premium natural supplements. 
-              Pure ingredients, potent results.
+            <p className="text-white/40 leading-relaxed mb-8 text-sm max-w-xs">
+              Direct-to-Consumer Affiliate Hub for premium natural supplements. We bridge the gap between you and verified laboratories.
             </p>
           </div>
           
           <div>
-            <h4 className="text-lg font-medium mb-6">Shop</h4>
-            <ul className="space-y-4 text-white/60">
-              <li><a href="#" className="hover:text-white transition-colors">All Products</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Best Sellers</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">New Arrivals</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Bundles</a></li>
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-8">Navigation</h4>
+            <ul className="space-y-4 text-sm text-white/50">
+              <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Categories</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Top Products</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-medium mb-6">Support</h4>
-            <ul className="space-y-4 text-white/60">
-              <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Shipping & Returns</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-8">Legal</h4>
+            <ul className="space-y-4 text-sm text-white/50">
               <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Cookie Policy</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Disclaimer</a></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="text-lg font-medium mb-6">Newsletter</h4>
-            <p className="text-white/60 mb-4">Subscribe for wellness tips and exclusive offers.</p>
-            <div className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="bg-white/10 border border-white/20 rounded px-4 py-2 w-full focus:outline-none focus:border-white/40 text-sm placeholder:text-white/40"
-              />
-              <button className="bg-white text-primary px-4 py-2 rounded font-medium hover:bg-white/90 transition-colors">
-                Join
-              </button>
+            <h4 className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-8">Direct Access</h4>
+            <p className="text-sm text-white/40 mb-6 italic">
+              "We earn affiliate commissions at no extra cost to you. Your trust is our absolute priority."
+            </p>
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-[10px] font-bold text-white/60">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
+              VERIFIED SUPPLIERS 2026
             </div>
           </div>
         </div>
         
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/40">
-          <p>© 2026 PuresuppHub. All rights reserved.</p>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">Terms</a>
-            <a href="#" className="hover:text-white transition-colors">Privacy</a>
-            <a href="#" className="hover:text-white transition-colors">Cookies</a>
-          </div>
+        <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-xs text-white/30 tracking-tight italic max-w-2xl text-center md:text-left">
+            Disclaimer: Content is for informational purposes only. Consult a doctor. We connect you directly to official encrypted checkout pages.
+          </p>
+          <p className="text-xs text-white/20 font-medium whitespace-nowrap">
+            © 2026 PuresuppHub. Built for speed.
+          </p>
         </div>
       </div>
     </footer>
