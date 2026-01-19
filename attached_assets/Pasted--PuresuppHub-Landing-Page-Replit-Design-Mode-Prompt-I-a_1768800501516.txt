@@ -1,0 +1,789 @@
+# PuresuppHub Landing Page - Replit Design Mode Prompt
+
+I am creating a landing page for PuresuppHub, a direct-to-consumer affiliate hub for premium natural supplements. This agent should generate React/Shadcn/Tailwind code with the ability to generate images and use stock photos.
+
+---
+
+## DESIGN.JSON - Complete Style Guidelines
+
+```json
+{
+  "designSystem": {
+    "brandIdentity": {
+      "tone": "Clean, Natural, Professional with Organic Warmth",
+      "personality": "Trustworthy but not clinical, modern but earthy, efficient but human",
+      "visualStyle": "Contemporary minimalism with natural photography and botanical elements",
+      "keyPrinciples": [
+        "BREATHING ROOM: Generous whitespace mimics the 'clean supplement' philosophy",
+        "NATURAL AUTHENTICITY: Real product photography over illustrations",
+        "SUBTLE SOPHISTICATION: Muted earth tones with strategic dark green accents",
+        "ASYMMETRIC BALANCE: Dynamic layouts that feel organic, not rigid grid-locked"
+      ]
+    },
+    
+    "colorPalette": {
+      "primary": {
+        "darkGreen": "#1B4332",
+        "description": "Deep forest green - trust, nature, premium quality",
+        "usage": "Primary CTAs, headers, footer, key UI elements"
+      },
+      "accent": {
+        "vibrantGreen": "#2D6A4F",
+        "neonGreen": "#40916C",
+        "description": "Mid-tone greens for interactive elements and emphasis",
+        "usage": "Buttons, badges, hover states, category pills"
+      },
+      "neutral": {
+        "warmWhite": "#F8F9F5",
+        "softBeige": "#F1F3EE",
+        "lightSage": "#E8EDE7",
+        "description": "Warm neutrals with subtle green undertones",
+        "usage": "Backgrounds, cards, section breaks"
+      },
+      "textColors": {
+        "primary": "#1A1A1A",
+        "secondary": "#4A4A4A",
+        "muted": "#6B6B6B",
+        "light": "#9CA3AF"
+      },
+      "semantic": {
+        "success": "#52B788",
+        "badge": "#FFD60A",
+        "trust": "#2D6A4F"
+      }
+    },
+    
+    "typography": {
+      "fontFamily": {
+        "primary": "DM Sans, -apple-system, BlinkMacSystemFont, sans-serif",
+        "description": "Modern, clean sans-serif with geometric undertones - professional but approachable"
+      },
+      "hierarchy": {
+        "h1": {
+          "fontSize": "4rem",
+          "lineHeight": "1.1",
+          "fontWeight": "500",
+          "letterSpacing": "-0.03em",
+          "mobile": "2.5rem",
+          "style": "Mix of regular weight with italic emphasis on key words"
+        },
+        "h2": {
+          "fontSize": "3rem",
+          "lineHeight": "1.15",
+          "fontWeight": "500",
+          "letterSpacing": "-0.02em",
+          "mobile": "2rem",
+          "style": "Regular weight, italic on emphasis words"
+        },
+        "h3": {
+          "fontSize": "1.75rem",
+          "lineHeight": "1.3",
+          "fontWeight": "500",
+          "mobile": "1.5rem"
+        },
+        "body": {
+          "fontSize": "1.125rem",
+          "lineHeight": "1.8",
+          "fontWeight": "400",
+          "maxWidth": "65ch"
+        },
+        "small": {
+          "fontSize": "0.875rem",
+          "lineHeight": "1.6",
+          "fontWeight": "400"
+        }
+      },
+      "emphasisPattern": {
+        "description": "Use italic font-style for emphasis words in headlines instead of bold",
+        "example": "The Fastest Way to Buy <em>Natural</em> Supplements",
+        "reason": "Creates elegant, editorial feel vs aggressive bold"
+      }
+    },
+    
+    "spacing": {
+      "scale": "4px base unit (consistent 4px rhythm)",
+      "sectionPadding": {
+        "desktop": "120px vertical",
+        "tablet": "80px vertical",
+        "mobile": "60px vertical"
+      },
+      "containerMaxWidth": "1320px",
+      "contentMaxWidth": "1140px",
+      "gridGap": {
+        "cards": "32px",
+        "elements": "24px"
+      },
+      "principles": [
+        "Extra generous vertical spacing between sections (120px+)",
+        "Content never touches edges - minimum 24px padding on mobile",
+        "Asymmetric spacing creates visual interest (e.g., 80px top, 120px bottom)"
+      ]
+    },
+    
+    "layout": {
+      "approach": "Asymmetric, editorial-style layouts",
+      "gridSystem": {
+        "type": "CSS Grid with named areas",
+        "columns": "Flexible, not locked to 12-col",
+        "overlap": "Strategic overlap of images and text blocks for depth"
+      },
+      "patterns": {
+        "heroLayout": "Text left 40%, large product image right 60% bleeding off canvas",
+        "twoColumn": "60/40 split with image on alternating sides",
+        "productGrid": "3 columns desktop, 2 tablet, 1 mobile with consistent gaps",
+        "imageContainment": "Images often extend beyond their containers for dynamic feel"
+      },
+      "breakpoints": {
+        "mobile": "640px",
+        "tablet": "768px",
+        "desktop": "1024px",
+        "wide": "1440px"
+      }
+    },
+    
+    "components": {
+      "buttons": {
+        "primary": {
+          "background": "#1B4332",
+          "color": "#FFFFFF",
+          "padding": "16px 40px",
+          "borderRadius": "8px",
+          "fontSize": "1rem",
+          "fontWeight": "500",
+          "letterSpacing": "0.01em",
+          "minWidth": "200px",
+          "hover": {
+            "background": "#2D6A4F",
+            "transform": "translateY(-2px)",
+            "shadow": "0 8px 20px rgba(27, 67, 50, 0.25)"
+          },
+          "transition": "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)"
+        },
+        "secondary": {
+          "background": "transparent",
+          "color": "#1B4332",
+          "border": "2px solid #1B4332",
+          "padding": "14px 38px",
+          "hover": {
+            "background": "#1B4332",
+            "color": "#FFFFFF"
+          }
+        },
+        "pill": {
+          "description": "Small category/badge buttons",
+          "background": "#E8EDE7",
+          "color": "#1B4332",
+          "padding": "8px 20px",
+          "borderRadius": "20px",
+          "fontSize": "0.875rem",
+          "fontWeight": "500",
+          "hover": {
+            "background": "#2D6A4F",
+            "color": "#FFFFFF"
+          }
+        }
+      },
+      
+      "cards": {
+        "productCard": {
+          "background": "#FFFFFF",
+          "padding": "0",
+          "borderRadius": "16px",
+          "border": "1px solid #E5E7EB",
+          "overflow": "hidden",
+          "shadow": "0 1px 3px rgba(0,0,0,0.04)",
+          "hover": {
+            "shadow": "0 12px 40px rgba(0,0,0,0.12)",
+            "transform": "translateY(-8px)",
+            "border": "1px solid #2D6A4F"
+          },
+          "transition": "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+          "imageSection": {
+            "aspectRatio": "1/1",
+            "background": "#F8F9F5",
+            "padding": "32px"
+          },
+          "contentSection": {
+            "padding": "24px"
+          }
+        },
+        "featureCard": {
+          "background": "#FFFFFF",
+          "padding": "40px 32px",
+          "borderRadius": "12px",
+          "border": "none",
+          "shadow": "0 2px 8px rgba(0,0,0,0.06)",
+          "iconSize": "48px",
+          "iconColor": "#2D6A4F"
+        }
+      },
+      
+      "badges": {
+        "bestSeller": {
+          "background": "#FFD60A",
+          "color": "#1A1A1A",
+          "padding": "4px 12px",
+          "borderRadius": "4px",
+          "fontSize": "0.75rem",
+          "fontWeight": "600",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.05em"
+        },
+        "trending": {
+          "background": "#2D6A4F",
+          "color": "#FFFFFF"
+        },
+        "category": {
+          "background": "rgba(45, 106, 79, 0.1)",
+          "color": "#1B4332",
+          "padding": "6px 14px",
+          "borderRadius": "6px",
+          "fontSize": "0.8125rem",
+          "fontWeight": "500"
+        }
+      },
+      
+      "images": {
+        "hero": {
+          "style": "High-quality product photography on clean white/neutral background",
+          "treatment": "Natural shadows, soft lighting, 60-70% opacity overlay on bg",
+          "positioning": "Bleeding off right edge, creates movement"
+        },
+        "products": {
+          "style": "3D render or studio photography, consistent lighting across all",
+          "background": "Subtle gradient from white to #F8F9F5",
+          "angle": "Slight 3/4 view, creates dimension"
+        },
+        "lifestyle": {
+          "style": "Natural light photography with plants, wooden surfaces, earth tones",
+          "treatment": "Warm color grading, never oversaturated",
+          "composition": "Asymmetric, editorial magazine style"
+        }
+      }
+    },
+    
+    "visualEffects": {
+      "shadows": {
+        "subtle": "0 1px 3px rgba(0, 0, 0, 0.04)",
+        "card": "0 2px 8px rgba(0, 0, 0, 0.06)",
+        "elevated": "0 12px 40px rgba(0, 0, 0, 0.12)",
+        "button": "0 8px 20px rgba(27, 67, 50, 0.25)"
+      },
+      "transitions": {
+        "smooth": "all 0.25s cubic-bezier(0.4, 0, 0.2, 1)",
+        "bounce": "all 0.35s cubic-bezier(0.4, 0, 0.2, 1)",
+        "snap": "all 0.15s ease-out"
+      },
+      "animations": {
+        "cardHover": "translateY(-8px) + shadow elevation",
+        "buttonHover": "translateY(-2px) + shadow + color shift",
+        "fadeInUp": "opacity 0→1, translateY(30px)→0, stagger children by 100ms"
+      },
+      "gradients": {
+        "sectionBackground": "linear-gradient(180deg, #F8F9F5 0%, #FFFFFF 100%)",
+        "heroOverlay": "linear-gradient(135deg, rgba(248,249,245,0.95) 0%, rgba(255,255,255,0.8) 100%)",
+        "cardImage": "linear-gradient(180deg, #FFFFFF 0%, #F8F9F5 100%)"
+      },
+      "patterns": {
+        "noise": "Add subtle noise texture overlay (3-5% opacity) on large background sections",
+        "organic": "Soft blob shapes in background (very subtle, 2-3% opacity max)"
+      }
+    },
+    
+    "photography": {
+      "style": "Natural, lifestyle-oriented product photography",
+      "lighting": "Soft, natural window light - never harsh studio flash",
+      "props": "Wooden surfaces, linen textures, ceramic pots, plants (especially Monstera/Pilea)",
+      "colorGrading": "Warm whites, desaturated greens, earthy neutrals",
+      "composition": [
+        "Negative space is intentional and generous",
+        "Asymmetric arrangements feel organic",
+        "Products shown in context of natural, healthy lifestyle",
+        "Overhead flat-lays mixed with 45° angle shots"
+      ]
+    },
+    
+    "iconography": {
+      "library": "Lucide React",
+      "size": "48px for feature cards, 24px for UI elements",
+      "strokeWidth": "1.5px",
+      "color": "#2D6A4F",
+      "style": "Minimalist, consistent line weight",
+      "usage": [
+        "Functional icons only - no decorative clutter",
+        "Always paired with text labels",
+        "Generous spacing around icons (min 16px)"
+      ]
+    },
+    
+    "sectionDesignPatterns": {
+      "hero": {
+        "background": "#FFFFFF with subtle gradient overlay",
+        "textPosition": "Left 40% of viewport",
+        "imagePosition": "Right 60%, bleeding off edge",
+        "badges": "Above headline, small pills with dot separators",
+        "ctaPlacement": "Below subtitle with 32px margin-top",
+        "ctaSubtext": "Below button, 12px margin-top, muted color"
+      },
+      "features": {
+        "background": "#F8F9F5 to #FFFFFF gradient",
+        "cardLayout": "3-column grid, equal height",
+        "iconPlacement": "Top-left of card content",
+        "cardSpacing": "32px gap between cards",
+        "hoverEffect": "Subtle lift, no color change"
+      },
+      "productGrid": {
+        "background": "#FFFFFF",
+        "layout": "3 columns desktop, 2 tablet, 1 mobile",
+        "cardStyle": "See productCard in components",
+        "filterPills": "Horizontal scroll on mobile, wrapped on desktop",
+        "pillStyle": "See pill button in components"
+      },
+      "trust": {
+        "background": "#F8F9F5 with noise texture",
+        "layout": "2-column, 40% text / 60% checklist",
+        "checkIcon": "Circle check, #2D6A4F color, 24px",
+        "spacing": "20px between each check item"
+      },
+      "finalCTA": {
+        "background": "#1B4332",
+        "textColor": "#FFFFFF",
+        "buttonStyle": "Inverted - white bg, dark text",
+        "padding": "100px vertical",
+        "alignment": "Center all content"
+      },
+      "footer": {
+        "background": "#0A1F1A (darker than primary)",
+        "textColor": "#9CA3AF",
+        "linkHover": "#FFFFFF",
+        "columnGap": "60px",
+        "verticalPadding": "80px"
+      }
+    },
+    
+    "contentGuidelines": {
+      "headlines": [
+        "Use sentence case, not title case",
+        "Italicize emphasis words instead of bolding",
+        "Keep to 8-12 words maximum",
+        "Action-oriented language"
+      ],
+      "body": [
+        "Short paragraphs (2-3 lines max)",
+        "Line length 60-70 characters",
+        "Generous line-height (1.8)",
+        "Use em-dashes (—) not hyphens for breaks"
+      ],
+      "lists": [
+        "Use checkmarks (✓) for benefits",
+        "Icons for category lists",
+        "Max 4-6 items per list",
+        "Each item 1-2 lines max"
+      ]
+    },
+    
+    "responsiveStrategy": {
+      "mobile": {
+        "stackAllColumns": true,
+        "imagePositioning": "Full-width, below text",
+        "buttonFullWidth": false,
+        "fontSizeReduction": "30-40%",
+        "paddingReduction": "50%"
+      },
+      "tablet": {
+        "maintain2ColumnLayouts": true,
+        "productGrid": "2 columns",
+        "fontSizeReduction": "20%"
+      },
+      "touchTargets": {
+        "minSize": "44px × 44px",
+        "spacing": "8px minimum between interactive elements"
+      }
+    },
+    
+    "accessibilityRequirements": {
+      "colorContrast": "WCAG AA minimum (4.5:1 for body text)",
+      "focusStates": "2px solid #2D6A4F outline, 4px offset",
+      "altText": "Descriptive for all images",
+      "headingHierarchy": "Proper semantic h1-h6 usage",
+      "keyboardNav": "All interactive elements accessible via keyboard"
+    },
+    
+    "performanceGuidelines": {
+      "images": {
+        "format": "WebP primary (optimized for web performance)",
+        "lazyLoad": "All images below fold",
+        "sizing": "Responsive srcset for different viewports",
+        "compression": "WebP allows smaller file sizes with better quality"
+      },
+      "animations": {
+        "useWillChange": "For transform/opacity animations",
+        "reducedMotion": "Respect prefers-reduced-motion media query"
+      }
+    }
+  }
+}
+```
+
+---
+
+## Landing Page Content Structure
+
+### 🎯 Section 1: Hero
+**Layout:** 2 columns (40% text / 60% image)  
+**Background:** #FFFFFF with subtle gradient overlay
+
+#### Column 1 (Text Content):
+- **Badges (pill style, above headline):**
+  - "🚀 NOT A SUPPLEMENT STORE"
+  - "•" (bullet separator)
+  - "NOT A REVIEW SITE"
+  - Style: #E8EDE7 background, #1B4332 text, 8px × 20px padding, 20px border-radius, inline-flex
+
+- **Title (h1):** 
+  The Fastest Way to Buy *Natural* Supplements— Direct from Verified Suppliers
+  - Note: Italicize "Natural" for emphasis
+  
+- **Subtitle (body text):**
+  Skip the endless browsing, account signups, and retail markups. PuresuppHub connects you straight to premium suppliers in 2 clicks—so you save time AND money.
+
+- **CTA Button (primary style):**
+  Find My Supplement (2 Clicks) →
+  
+- **CTA Subtext (small, muted):**
+  No signup required. Direct to supplier in 60 seconds.
+
+#### Column 2 (Visual):
+- **Image:** User will provide hero image OR use placeholder showing:
+  - Premium supplement bottle on clean white background
+  - Soft natural shadows
+  - Optional: Visual flow diagram "You → Supplier" with crossed-out "Retail/Middleman"
+- **Treatment:** Image bleeds off right edge of viewport, creates dynamic movement
+- **Style:** Clean, modern, professional lifestyle product photography
+- **Fallback:** If no image provided, use a simple illustration with brand colors
+
+---
+
+### ✅ Section 2: Why PuresuppHub?
+**Layout:** 1 column title + 3 column card grid  
+**Background:** Gradient from #F8F9F5 to #FFFFFF
+
+#### Title:
+- **H2:** Why PuresuppHub?
+
+#### 3-Column Feature Cards:
+
+**Card 1:**
+- **Icon:** Search (Lucide), 48px, #2D6A4F
+- **Title (h3):** We Research & Curate
+- **Body:** Our team spends weeks vetting natural supplement suppliers based on FDA registration & 3rd-party testing. You get a pre-filtered list of only the best.
+
+**Card 2:**
+- **Icon:** Zap (Lucide), 48px, #2D6A4F  
+- **Title (h3):** Your Express Lane
+- **Body:** Instead of 2+ hours comparing sites, click the supplement you want and land directly on the checkout. 2-minute access vs 2-hour search.
+
+**Card 3:**
+- **Icon:** DollarSign (Lucide), 48px, #2D6A4F
+- **Title (h3):** Direct Pricing  
+- **Body:** Buying straight from suppliers cuts out the middlemen (and their markups). Premium quality at source prices.
+
+---
+
+### 📦 Section 3: Product Catalog
+**Layout:** Filter pills + 3-column product grid  
+**Background:** #FFFFFF
+
+#### Header:
+- **Title (h2):** Verified Product Catalog 2026
+- **Subtitle:** FDA-registered suppliers • Natural ingredients • Direct access
+
+#### Category Filter Pills:
+Horizontal scrolling row of pill buttons:
+- 🦷 Oral Health
+- 🧠 Brain & Hearing
+- 🩸 Blood Sugar
+- 🏃 Physical Performance
+- 🌿 General Wellness
+- 💅 Skin, Hair & Nails
+- 💪 Men's Vitality
+- ⚖️ Weight Management
+
+#### Product Grid (3 cols desktop, 2 tablet, 1 mobile):
+
+**IMPORTANT:** Product images will be provided as separate WebP files. Use placeholder images with the correct aspect ratio (1:1 square) and apply the styling below. Image filenames should match product names (e.g., "prodentim.webp", "sugar-defender.webp").
+
+**Image Treatment for All Products:**
+- Aspect ratio: 1:1 (square)
+- Background: Gradient from #FFFFFF to #F8F9F5
+- Padding: 32px around image
+- Object-fit: contain (to preserve product proportions)
+- Border-radius: 16px 16px 0 0 (top corners only)
+
+**Product Data Array:**
+
+```javascript
+const products = [
+  {
+    id: 1,
+    name: "ProDentim",
+    category: "Oral Health",
+    emoji: "🦷",
+    badge: "BEST SELLER",
+    badgeColor: "#FFD60A",
+    description: "3.5 Billion probiotic strains for optimal oral health",
+    image: "/images/products/prodentim.webp" // User will provide
+  },
+  {
+    id: 2,
+    name: "Sugar Defender",
+    category: "Blood Sugar",
+    emoji: "🩸",
+    badge: "BEST SELLER",
+    badgeColor: "#FFD60A",
+    description: "All-day energy and blood sugar support helper",
+    image: "/images/products/sugar-defender.webp"
+  },
+  {
+    id: 3,
+    name: "ZenCortex",
+    category: "Hearing & Brain",
+    emoji: "🧠",
+    badge: "TRENDING",
+    badgeColor: "#2D6A4F",
+    description: "360-degree hearing support and mental sharpness",
+    image: "/images/products/zencortex.webp"
+  },
+  {
+    id: 4,
+    name: "Advanced Amino Formula",
+    category: "Physical Performance",
+    emoji: "🏃",
+    badge: null,
+    description: "Essential amino acids for peak recovery",
+    image: "/images/products/advanced-amino-formula.webp"
+  },
+  {
+    id: 5,
+    name: "Advanced Collagen Plus",
+    category: "Skin & Joints",
+    emoji: "💅",
+    badge: null,
+    description: "Premium collagen for skin elasticity and joint mobility",
+    image: "/images/products/advanced-collagen-plus.webp"
+  },
+  {
+    id: 6,
+    name: "Aizen Power",
+    category: "Men's Vitality",
+    emoji: "💪",
+    badge: null,
+    description: "Natural dominance and vitality formula for men",
+    image: "/images/products/aizen-power.webp"
+  },
+  {
+    id: 7,
+    name: "DigestSync",
+    category: "Digestive Health",
+    emoji: "🌿",
+    badge: null,
+    description: "Advanced digestive support with enzyme-rich formula",
+    image: "/images/products/digestsync.webp"
+  },
+  {
+    id: 8,
+    name: "Fluxactive Complete",
+    category: "Prostate Health",
+    emoji: "💪",
+    badge: null,
+    description: "Complete 14-in-1 wellness formula",
+    image: "/images/products/fluxactive-complete.webp"
+  },
+  {
+    id: 9,
+    name: "GlutLess",
+    category: "Blood Sugar",
+    emoji: "🩸",
+    badge: null,
+    description: "Supports healthy blood sugar balance",
+    image: "/images/products/glutless.webp"
+  },
+  {
+    id: 10,
+    name: "JointEternal",
+    category: "Joint Health",
+    emoji: "🏃",
+    badge: null,
+    description: "Natural support for joint comfort",
+    image: "/images/products/jointeternal.webp"
+  },
+  {
+    id: 11,
+    name: "Kerassentials",
+    category: "Skin & Nails",
+    emoji: "💅",
+    badge: null,
+    description: "Doctor-formulated oil for healthy nails",
+    image: "/images/products/kerassentials.webp"
+  },
+  {
+    id: 12,
+    name: "LeanBliss",
+    category: "Weight Management",
+    emoji: "⚖️",
+    badge: null,
+    description: "Natural weight management and craving control",
+    image: "/images/products/leanbliss.webp"
+  },
+  {
+    id: 13,
+    name: "Liposomal Hair Renewal",
+    category: "Hair Health",
+    emoji: "💅",
+    badge: null,
+    description: "Revitalize hair thickness with liposomal tech",
+    image: "/images/products/liposomal-hair-renewal.webp"
+  },
+  {
+    id: 14,
+    name: "NeuroFortis",
+    category: "Brain Health",
+    emoji: "🧠",
+    badge: null,
+    description: "Cognitive support for memory and mental clarity",
+    image: "/images/products/neurofortis.webp"
+  },
+  {
+    id: 15,
+    name: "Pineal Guardian",
+    category: "Brain Health",
+    emoji: "🧠",
+    badge: null,
+    description: "Unlock mental clarity and support memory",
+    image: "/images/products/pineal-guardian.webp"
+  },
+  {
+    id: 16,
+    name: "PrimeBiome",
+    category: "Digestive Health",
+    emoji: "🌿",
+    badge: null,
+    description: "Dual-action probiotic for total gut health",
+    image: "/images/products/primebiome.webp"
+  },
+  {
+    id: 17,
+    name: "Steel Bite Pro",
+    category: "Oral Health",
+    emoji: "🦷",
+    badge: null,
+    description: "Herbal formula to rebuild dental resilience",
+    image: "/images/products/steel-bite-pro.webp"
+  },
+  {
+    id: 18,
+    name: "TonicGreens",
+    category: "Immunity",
+    emoji: "🌿",
+    badge: null,
+    description: "6-in-1 immune support blend with essential greens",
+    image: "/images/products/tonicgreens.webp"
+  }
+];
+```
+
+**Each Product Card Structure:**
+- Image section (top): User-provided image with gradient background
+- Badge (if applicable): Positioned top-right of image
+- Category badge: Emoji + category name
+- Product name (h3)
+- Description text
+- Checkmarks: "✓ FDA Facility" "✓ Natural Ingredients"
+- CTA Button: "Get Direct Access" (#2D6A4F background)
+
+---
+
+### 🔒 Section 4: Trust & Security
+**Layout:** 2 columns (40% title / 60% checklist)  
+**Background:** #F8F9F5 with subtle noise texture overlay
+
+#### Column 1:
+- **Title (h2):** Why Smart Shoppers Trust Us
+
+#### Column 2 (Vertical stack of check items):
+- ✓ **FDA-Registered Suppliers Only**  
+  We only list manufacturers with certified facilities in the USA
+
+- ✓ **Zero Data Storage**  
+  We never ask for your email or credit card. Your privacy is absolute
+
+- ✓ **SSL Direct Link**  
+  You are securely redirected to the official encrypted checkout page
+
+- ✓ **Money-Back Guarantees**  
+  All listed partners offer 60-180 day protections on your purchase
+
+*Icon style: CheckCircle (Lucide), 24px, #2D6A4F color*
+
+---
+
+### 🎯 Section 5: Final Call to Action
+**Layout:** 1 column, centered  
+**Background:** #1B4332 (dark green)  
+**Text color:** #FFFFFF
+
+#### Content (all centered):
+- **Title (h2):** Ready to skip the markup?
+
+- **Subtitle (body):** Find your supplement now and get the official direct price.
+
+- **CTA Button (inverted style):**
+  Browse Verified List →
+  - Background: #FFFFFF
+  - Text: #1B4332
+  - Padding: 20px 48px
+  - Large, prominent
+
+---
+
+### 📄 Section 6: Footer
+**Layout:** 4 columns  
+**Background:** #0A1F1A (darkest green)  
+**Text color:** #9CA3AF
+
+#### Column 1 - Brand:
+- **Logo:** PuresuppHub (white version)
+- **Tagline:** Direct access to premium natural supplements
+
+#### Column 2 - Navigation:
+- Home
+- Categories  
+- Top Products
+- About
+- Contact
+
+#### Column 3 - Legal:
+- Privacy Policy
+- Terms of Service
+- Affiliate Disclosure
+
+#### Column 4 - Newsletter (optional):
+- Email signup form
+- Social icons
+
+#### Bottom Bar (full width):
+- **Disclaimer:** "Content is for informational purposes only. Consult a doctor. We earn affiliate commissions at no extra cost to you."
+- **Copyright:** © 2026 PuresuppHub. All rights reserved.
+
+---
+
+## Critical Design Instructions:
+
+1. **Photography style is CRITICAL:** All product images must look like the reference - studio quality, soft natural lighting, clean backgrounds with subtle gradients
+2. **Asymmetric layouts:** Don't make everything centered - use the 40/60 split pattern
+3. **Generous spacing:** Sections feel "airy" with 120px+ vertical padding
+4. **Italic emphasis:** Use `<em>` tags for emphasis words in headlines, NOT `<strong>`
+5. **Natural color palette:** Stick to the earthy greens and warm neutrals - no bright primary colors except for badges
+6. **Hover animations:** All cards and buttons have smooth lift effects
+7. **Image bleeding:** Hero image should extend beyond its container to the right edge
+8. **Noise texture:** Add subtle noise overlay on background sections for organic feel
