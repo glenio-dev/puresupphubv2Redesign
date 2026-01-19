@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Hero } from "@/components/home/Hero";
 import { Features } from "@/components/home/Features";
 import { ProductGrid } from "@/components/home/ProductGrid";
+import { Support } from "@/components/home/Support";
 import { Footer } from "@/components/layout/Footer";
 import { products } from "@/lib/products";
 
@@ -13,6 +14,7 @@ export default function Home() {
         <Hero />
         <Features />
         <ProductGrid products={products} title="Verified Product Catalog 2026" />
+        <Support />
       </main>
       <Footer />
     </div>
